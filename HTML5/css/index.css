@@ -1,6 +1,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard.css");
 @import url("./normalize.css");
 @import url("./reset.css");
+
 /* 기본스타일 */
 *, *::before, *::after{
   box-sizing:border-box;
@@ -22,36 +23,47 @@ body {
 /* 헤더 */
 .header {
   background: yellow;
-  height:10vh;
+
 }
 /* 비주얼 */
 .visual {
   background: pink;
-  height:10vh;
+
 }
 /*메인 */
 .main {
-  height:40vh;
+  display: flow-root;
   background: blue;
-  padding: 30px 0px;
-  display: flex; /**/
-  flex-flow:row nowrap;
-  /* flex-direction: row;
+  padding: 30px 15px;
+  /* display: flex;  */
+  /* flex-flow:row nowrap;
+  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start; */
-  /* align-items: stretch; */
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  align-items: stretch;
+  justify-content: space-evenly; */
   
+}
+.main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.clearfix{
+  clear:both; 
 }
 /*그룹 */
 .group {
-  background: skyblue;
+  float : left;
+  background-color: skyblue;
+  margin: 0 15px;
 }
 .group1 {
 width:250px;
 }
 .group2 {
 width:380px;
+
 }
 .group3 {
 width:190px;
@@ -59,7 +71,7 @@ width:190px;
 /*슬로건 */
 .slogan {
   background: lime;
-  height:10vh;
+
 }
 /*푸터 */
 .footer {
@@ -67,5 +79,5 @@ width:190px;
 }
 .footer-inner {
   background: coral;
-  height:10vh;
+
 }
